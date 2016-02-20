@@ -1,0 +1,30 @@
+<h2>Listing stops</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Lat</th>
+      <th>Lng</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for stop <- @stops do %>
+    <tr>
+      <td><%= stop.name %></td>
+      <td><%= stop.lat %></td>
+      <td><%= stop.lng %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: stop_path(@conn, :show, stop), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: stop_path(@conn, :edit, stop), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: stop_path(@conn, :delete, stop), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New stop", to: stop_path(@conn, :new) %>

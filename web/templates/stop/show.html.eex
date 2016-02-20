@@ -1,0 +1,23 @@
+<h2>Show stop</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @stop.name %>
+  </li>
+
+  <li>
+    <strong>Lat:</strong>
+    <%= @stop.lat %>
+  </li>
+
+  <li>
+    <strong>Lng:</strong>
+    <%= @stop.lng %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: stop_path(@conn, :edit, @stop) %>
+<%= link "Back", to: stop_path(@conn, :index) %>

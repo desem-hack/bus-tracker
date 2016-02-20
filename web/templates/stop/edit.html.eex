@@ -1,0 +1,6 @@
+<h2>Edit stop</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: stop_path(@conn, :update, @stop) %>
+
+<%= link "Back", to: stop_path(@conn, :index) %>
