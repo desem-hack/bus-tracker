@@ -1,5 +1,5 @@
-<h2>Listing stops</h2>
-
+<h2>Existing stops</h2>
+<br />
 <table class="table">
   <thead>
     <tr>
@@ -13,12 +13,12 @@
   <tbody>
 <%= for stop <- @stops do %>
     <tr>
-      <td><%= stop.name %></td>
+      <td><%= stop.name |> String.capitalize %></td>
       <td><%= stop.lat %></td>
       <td><%= stop.lng %></td>
 
       <td class="text-right">
-        <%= link "Show", to: stop_path(@conn, :show, stop), class: "btn btn-default btn-xs" %>
+        <!-- <%= link "Show", to: stop_path(@conn, :show, stop), class: "btn btn-default btn-xs" %> -->
         <%= link "Edit", to: stop_path(@conn, :edit, stop), class: "btn btn-default btn-xs" %>
         <%= link "Delete", to: stop_path(@conn, :delete, stop), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
       </td>

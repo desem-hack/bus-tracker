@@ -154,7 +154,7 @@
 	      _react2.default.createElement(
 	        'h1',
 	        null,
-	        'St Night Bus'
+	        'St Andrews Night Bus'
 	      ),
 	      _react2.default.createElement(
 	        'h2',

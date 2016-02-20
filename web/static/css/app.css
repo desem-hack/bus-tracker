@@ -19,16 +19,13 @@ form.link, form.button {
 }
 
 /* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-}
 .logo {
-  width: 519px;
-  height: 71px;
-  display: inline-block;
-  margin-bottom: 1em;
-  background-image: url("/images/phoenix.png");
-  background-size: 519px 71px;
+  float: left;
+  width: 64px;
+}
+
+.logo img {
+  width: 100%;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
